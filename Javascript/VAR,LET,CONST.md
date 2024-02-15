@@ -1,4 +1,4 @@
-_var,let,const_
+__var,let,const__
 
 console.log(myConst1); // Output: ReferenceError: Cannot access 'myConst1' before initialization
 let myConst1 = 42;
