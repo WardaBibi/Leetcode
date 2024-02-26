@@ -1,0 +1,17 @@
+def LRU(strInput):
+    ds=[]
+    for char in strInput:
+        if char in ds:
+            ds.remove(char)
+        ds.append(char)
+    
+    if len(ds) > 5:
+        ds=ds[-5:]
+    
+    ds='-'.join(ds)
+    return ds
+    
+print(LRU(["A", "B", "C", "D", "E", "D", "Q", "Z", "C"]))
+print(LRU(["A", "B", "A", "C", "A", "B"]))
+print(LRU(["A", "B", "C", "D", "A", "E", "D", "Z"]))
+    
