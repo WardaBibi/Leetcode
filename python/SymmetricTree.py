@@ -1,4 +1,4 @@
-
+# recursive tree approach
 class Node:
     def __init__(self,val):
         self.val=val
@@ -56,6 +56,24 @@ if __name__== "__main__":
     
     checkSymmetric=Solution()
     print(checkSymmetric.symmetric(tree.root.left,tree.root.right))
+
+
+
+
+#iterative array approach:
+# arr=[1,2,2,'#',1,1,'#']
+arr=[4,3,4]
+
+def issymmetric(l,r):
+    if  (l > len(arr) or r > len(arr)) or (not arr[l] and not arr[r] ) or (arr[l]=='#' and arr[r]=='#'):
+        return True
+    elif (not arr[l] and arr[r]) or (arr[l] and not arr[r]) or (arr[l]!=arr[r]):
+        return False
+    else:
+        return issymmetric(2*l+1 , 2*r+2) and issymmetric(2*l+2,2*r+1)
+    
+
+print(issymmetric(1,2))
     
     
 
