@@ -28,4 +28,29 @@ class Solution:
         return str1[:gcd(len(str1),len(str2))]
 
 
+#method3:
+class Solution:
+    def gcd(self,a,b): 
+        if a%b == 0:
+            return b
+        else:
+            return self.gcd(b,a%b)
+
+
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+
+        if str1+str2!=str2+str1:
+            return ""
+        else:
+            a=len(str1)
+            b=len(str2)
+            if not (a > b):
+                temp=a
+                a=b
+                b=temp
+            n=self.gcd(a,b)
+            return str1[:n]
+        
+
+
         
