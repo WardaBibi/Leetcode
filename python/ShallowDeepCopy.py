@@ -65,3 +65,18 @@ new_list = append_to(4, original_list)
 
 print(original_list) 
 print(new_list) 
+
+
+
+#--------------------------------------------------------------------------------
+= copy beavuior:
+
+arr=[[1,2],3]
+newarr=arr
+newarr[1]=5 #change original + new so its showing shallow behavior
+newarr[0].append(0) #change original + new s its showing shallow behavior
+newarr.append(0) #change original + new so its not shallow behaviour 
+ # so this = beahviour is kind of shallow but also changes incase of append
+
+print(newarr)
+print(arr)
