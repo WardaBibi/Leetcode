@@ -35,4 +35,4 @@ graph={
     }
 print(bfs_of_graph(graph,4))
 
-# O(N),O(N)
+# O(N),space -> O(N+2E)
