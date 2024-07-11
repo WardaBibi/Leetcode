@@ -45,6 +45,8 @@ dfs.PostOrder(root)
 print("InOrder: ")
 dfs.InOrder(root)
 
-        
-        
+
+# time complexity: O(n) -> each node is being visited once
+# space complexity: O(h) ->because of recursion at each call stack of height h would be used  where h is the height of tree , in worst case it would be O(n) when we have an unbalanced tree
+ # and the height would be equal to number of nodes but in best case height would be log(n) so space complexity would be O(log(n))      
         
